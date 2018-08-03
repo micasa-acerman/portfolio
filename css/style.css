@@ -4,81 +4,114 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  font-size: 11pt; }
+  font-size: 11pt;
+  margin: 0; }
 
-.wrapper {
-  padding: 3em 6em; }
-  .wrapper article {
-    background-color: white;
-    background-repeat: no-repeat;
-    z-index: 1;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
-    width: 86em;
-    max-width: calc(100vw - 6em);
-    align-items: center;
-    display: flex;
-    margin: 0px auto; }
-  .wrapper h1 {
-    text-align: center;
-    font-size: 1.9rem;
-    margin: 0.2em 0em;
-    font-weight: 100;
-    letter-spacing: 2px; }
-  .wrapper h2 {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #a0a0a0;
-    font-weight: 100; }
-  .wrapper p {
+article {
+  background-color: white;
+  background-repeat: no-repeat;
+  z-index: 1;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  margin: 0px auto; }
+
+p {
+  font-weight: 300;
+  font-size: 11pt;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify; }
+
+.text-center {
+  text-align: center; }
+
+.page-image {
+  min-height: 25em;
+  flex: 50%;
+  background-color: #ddd;
+  background-position: center;
+  background-image: url("../img/pic01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.content {
+  flex: 50%; }
+
+.block {
+  padding: 0em 2em; }
+
+.title {
+  text-align: center;
+  font-size: 1.9rem;
+  margin: 0.2em 0em;
+  font-weight: 100;
+  letter-spacing: 2px; }
+
+.comment {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #a0a0a0;
+  font-weight: 100; }
+
+.button {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 1em;
+  border: #c3c3c3 solid 1px;
+  min-width: 12em;
+  margin: 1em 0em; }
+  .button a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #636363;
+    letter-spacing: 0.3em;
     font-weight: 300;
-    font-size: 11pt;
-    font-family: 'Open Sans', sans-serif; }
-  .wrapper .page-image {
-    min-height: 50em;
-    min-width: 50%;
-    background-color: #ddd;
-    background-position: center;
-    background-image: url("../img/pic01.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 1;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  .wrapper .page-image:hover {
-    opacity: 0.8; }
-  .wrapper .block {
-    padding: 0em 2em; }
-  .wrapper .button {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    padding: 1em;
-    border: #c3c3c3 solid 1px;
-    min-width: 12em;
-    margin: 1em 0em; }
-    .wrapper .button a {
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #636363;
-      letter-spacing: 0.3em;
-      font-weight: 300;
-      font-size: 10pt; }
-  .wrapper .button:hover {
-    border-color: #ff3333; }
-    .wrapper .button:hover a {
-      color: #ff3333; }
-  .wrapper .nav {
-    list-style-type: none;
-    display: inline-block;
-    vertical-align: top;
-    zoom: 1;
-    /* Fix for IE7 */
-    *display: inline;
-    /* Fix for IE7 */ }
-  .wrapper .text-center {
-    text-align: center; }
+    font-size: 10pt; }
+
+.button:hover {
+  border-color: #ff3333; }
+  .button:hover a {
+    color: #ff3333; }
+
+.nav {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  zoom: 1;
+  /* Fix for IE7 */
+  *display: inline;
+  /* Fix for IE7 */ }
+
+/*
+	MEDIA
+*/
+@media only screen and (max-width: 640px) {
+  .block {
+    padding: 0em 1em; }
+
+  .title {
+    font-size: 1.7rem;
+    margin-top: 0.8em; }
+
+  p {
+    font-size: 10pt; } }
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .page-image {
+    min-height: 45em; } }
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    padding: 3em 0em; }
+
+  p {
+    text-align: left; }
+
+  article {
+    display: flex;
+    width: 86em;
+    max-width: calc(100vw - 6em); }
+    article .page-image {
+      min-height: 50em; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.css">
 </head>
@@ -12,26 +14,57 @@
 			<div class="page-image animated fadeIn"></div>
 			<div class="content">
 				<div class="block animated fadeIn">
-					<h1>Мрикаев Константин</h1>
-					<h2>Веб разработчик, мобильный разработчик</h2>1
+					<h1 class="title">Мрикаев Константин</h1>
+					<h2 class="comment">Веб разработчик, мобильный разработчик</h2>
 					<p>Доброго времени суток, меня зовут Константин. Занимаюсь разработкой сайтов с нуля, под ключ. Специалист по CMS WordPress, OpenCart, Elgg. Выполняю верстку и программирование сайтов. Добавляю весь необходимый функционал на сайт. Делаю адаптивную верстку на Bootstrap, таким образом Ваш сайт будет отлично выглядеть на всех устройствах. Любой начатый проект довожу до конца, постоянно совершенствую свой профессиональный уровень. Вы можете заказать у меня разработку сайта с нуля, или связаться со мной для сотрудничества.</span>
 					</p>
 					<div class="text-center">
-					<ul class="nav">
-						<li class="button">
-							<a href="#">Портфолио</a>
-						</li>
-						<li class="button">
-							<a href="#">Отзывы</a>
-						</li>
-						<li class="button">
-							<a href="#">Написать</a>
-						</li>
-					</ul>
+						<ul class="nav">
+							<li class="button">
+								<a href="#" id="portfolio">Портфолио</a>
+							</li>
+							<li class="button">
+								<a href="#">Отзывы</a>
+							</li>
+							<li class="button">
+								<a href="#">Написать</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</article>
 	</div>
+	<script type="text/javascript">
+		$.fn.extend({
+			animateCss: function(animationName, callback) {
+				var animationEnd = (function(el) {
+					var animations = {
+						animation: 'animationend',
+						OAnimation: 'oAnimationEnd',
+						MozAnimation: 'mozAnimationEnd',
+						WebkitAnimation: 'webkitAnimationEnd',
+					};
+
+					for (var t in animations) {
+						if (el.style[t] !== undefined) {
+							return animations[t];
+						}
+					}
+				})(document.createElement('div'));
+
+				this.addClass('animated ' + animationName).one(animationEnd, function() {
+					$(this).removeClass('animated ' + animationName);
+
+					if (typeof callback === 'function') callback();
+				});
+
+				return this;
+			},
+		});
+		$("#portfolio").click(function(){
+			$('div').animateCss('bounce');
+		})
+	</script>
 </body>
 </html>
