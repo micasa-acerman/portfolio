@@ -166,6 +166,27 @@
 	#back-portfolio {
 		
 	}
+	.social {
+		margin-top:1.5em;
+		a{
+			margin:0em 0.8em;
+			text-decoration:none;
+			i{
+				-webkit-transition: all 0.3s ease;;
+				-moz-transition: all 0.3s ease;;
+				-o-transition: all 0.3s ease;;
+				transition: all 0.3s ease;
+				color:gray;
+			}
+		}
+		a:hover {
+			i {
+				
+				color:rgb(175, 175, 175);
+			}
+		}
+
+	}
 
 
 
