@@ -33,7 +33,9 @@
 			$("#nav-portfolio").click(function(){
 				transform('#main','#portfolio')
 			});
-				
+			$("#portfolio .nav-back").click(function(){
+				transform('#portfolio','#main')
+			});
 		}
 		function transform(from,to) {
 			$(from).animateCss('fadeOut',function(){

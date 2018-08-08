@@ -126,9 +126,13 @@ p {
     background: #fbfbfb;
     border: 0px;
     float: left; }
-    .panel .nav-back div, .panel .nav-back i {
+    .panel .nav-back div {
       display: inline-block;
       vertical-align: middle; }
+    .panel .nav-back i {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0px 10px; }
   .panel .panel-title, .panel div {
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -140,6 +144,20 @@ p {
 .text-center {
   text-align: center;
   vertical-align: middle; }
+
+.social {
+  margin-top: 1.5em; }
+  .social a {
+    margin: 0em 0.8em;
+    text-decoration: none; }
+    .social a i {
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      color: gray; }
+  .social a:hover i {
+    color: #afafaf; }
 
 @media only screen and (max-width: 640px) {
   .block {

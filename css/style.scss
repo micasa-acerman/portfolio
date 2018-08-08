@@ -41,7 +41,6 @@
 		background-repeat:no-repeat;
 		background-size:cover;
 	}
-	// Test
 	// Right Part
 	.content{
 		flex:50%;
@@ -145,9 +144,14 @@
 			background:#fbfbfb;
 			border: 0px;
 			float:left;
-			div,i {
+			div {
 				display:inline-block;
 				vertical-align:middle;
+			}
+			i{
+				display:inline-block;
+				vertical-align:middle;
+				margin:0px 10px;
 			}
 		}
 		.panel-title, div{
