@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,10 +8,12 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 </head>
 <body>
 	<div class="wrapper animated zoomIn">
-		<article>
+		<article class="main" id="main">
 			<div class="page-image animated fadeIn"></div>
 			<div class="content">
 				<div class="block animated fadeIn">
@@ -21,7 +24,7 @@
 					<div class="text-center">
 						<ul class="nav">
 							<li class="button">
-								<a href="#" id="portfolio">Портфолио</a>
+								<a href="#" id="nav-portfolio">Портфолио</a>
 							</li>
 							<li class="button">
 								<a href="#">Отзывы</a>
@@ -34,37 +37,32 @@
 				</div>
 			</div>
 		</article>
+
+		<article id="portfolio">
+			<div class="panel">
+				<button class='nav-back' id='back-portfolio'>
+					<i class="material-icons">
+						keyboard_arrow_left
+					</i>
+				<div class="">ГЛАВНАЯ</div>
+				</button>
+				<h2 class="text-center panel-title">ПОРТФОЛИО</h2>
+			</div>
+			<div class="row">
+				<div class="project-icon"> 
+					<img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22239%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20239%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16505b227f4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A12pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16505b227f4%22%3E%3Crect%20width%3D%22239%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2288.828125%22%20y%3D%2295.3296875%22%3E239x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="pick" alt="pick"></img>
+				</div>
+				<div class="project-content">
+					<h4 class="project-title">Проект "Мой интерактивный ВУЗ"</h4>
+					<div class="project-company">ООО Экспертно-Аналитические системы</div>
+					<div class="project-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum magnam accusantium sapiente beatae laudantium sed laboriosam totam ipsa voluptas iste! Quam doloremque ipsam laborum aliquam incidunt provident molestias fugiat mollitia.
+					</div>
+				</div>
+			</div>
+
+		</article>
 	</div>
-	<script type="text/javascript">
-		$.fn.extend({
-			animateCss: function(animationName, callback) {
-				var animationEnd = (function(el) {
-					var animations = {
-						animation: 'animationend',
-						OAnimation: 'oAnimationEnd',
-						MozAnimation: 'mozAnimationEnd',
-						WebkitAnimation: 'webkitAnimationEnd',
-					};
-
-					for (var t in animations) {
-						if (el.style[t] !== undefined) {
-							return animations[t];
-						}
-					}
-				})(document.createElement('div'));
-
-				this.addClass('animated ' + animationName).one(animationEnd, function() {
-					$(this).removeClass('animated ' + animationName);
-
-					if (typeof callback === 'function') callback();
-				});
-
-				return this;
-			},
-		});
-		$("#portfolio").click(function(){
-			$('div').animateCss('bounce');
-		})
-	</script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

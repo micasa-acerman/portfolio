@@ -93,45 +93,121 @@
 		zoom: 1; /* Fix for IE7 */
 		*display: inline; /* Fix for IE7 */
 	}
+	.hidden {
+		display:none;
+	}
 
 
-		/*
-			MEDIA
-		*/
-		@media only screen and (max-width:640px) {
-			.block {
-				padding: 0em 1em;
-			}
-			.title {
-				font-size:1.7rem;
-				margin-top:0.8em;
-			}
-			p{
-				font-size:10pt;
+	.row:hover{
+		box-shadow: 1px 1px 6px rgba(0.2,0.2,0.2,0.5);
+	}
+	.row{
+		z-index: 0;
+		box-shadow: 0px 0px 5px rgba(0.2,0.2,0.2,0.2);
+		width:100%;
+		display:flex;
+		.project-icon{
+			width:20em;
+			min-height:100%;
+			img{
+				width:20em;
+				min-height:100%;
 			}
 		}
-		@media only screen and (min-width:640px) and (max-width:1024px) {
-			.page-image{
-				min-height:45em;
+		.project-content{
+			padding:1em 1em;
+			.project-title {
+				text-align:center;
+				font-size:1.3rem;	
+				margin: 0.2em 0em;
+				font-weight:100;
+				letter-spacing:2px;
 			}
+			.project-company {
+				text-align:center;
+				font-size:0.8rem;
+				color:#a0a0a0;
+				font-weight:100;
+			}
+			.project-description {
+				text-align:justify;
+			}
+		}
+	}
 
+	.panel{
+		padding:0.6em 0em;
+		background:#fbfbfb;
+		z-index:1;
+		position: relative;
+		.nav-back{
+			background:#fbfbfb;
+			border: 0px;
+			float:left;
+			div,i {
+				display:inline-block;
+				vertical-align:middle;
+			}
+		}
+		.panel-title, div{
+			font-family: 'Roboto', sans-serif;
+			text-align:center;
+			font-size:1.2rem;	
+			margin: 0.2em 0em;
+			font-weight:100;
+			letter-spacing:2px;
+		}
+	}
+
+	.text-center{
+		text-align:center;
+		vertical-align: middle;
+	}
+	#back-portfolio {
+		
+	}
+
+
+
+	@media only screen and (max-width:640px) {
+		.block {
+			padding: 0em 1em;
+		}
+		.title {
+			font-size:1.7rem;
+			margin-top:0.8em;
+		}
+		p{
+			font-size:10pt;
+		}
+	}
+	@media only screen and (min-width:640px) and (max-width:1024px) {
+		.page-image{
+			min-height:45em;
 		}
 
+	}
 
-		@media only screen and (min-width:1024px){
-			.wrapper{
-				padding:3em 0em;
-			}
-			p{
-				text-align:left;
-			}
-			article {
-				display: flex; 
-				width:86em;
-				max-width:calc(100vw - 6em);
-				.page-image{ 
-					min-height:50em;
-				}
-			} 
 
+	@media only screen and (min-width:1024px){
+		.wrapper{
+			padding:3em 0em;
 		}
+		p{
+			text-align:left;
+		}
+		.main {
+			display: flex; 
+			width:86em;
+			max-width:calc(100vw - 6em);
+			.page-image{ 
+				min-height:50em;
+			}
+		} 
+		#portfolio {
+			display: block;
+			width:86em;
+			max-width:calc(100vw - 6em);
+		}
+
+	}
