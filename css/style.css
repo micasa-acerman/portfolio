@@ -135,8 +135,6 @@ p {
       margin: 0px 10px; }
   .panel .panel-title, .panel div {
     font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 1.2rem;
     margin: 0.2em 0em;
     font-weight: 100;
     letter-spacing: 2px; }
@@ -168,10 +166,23 @@ p {
     margin-top: 0.8em; }
 
   p {
-    font-size: 10pt; } }
+    font-size: 10pt; }
+
+  .panel div {
+    font-size: 0.8rem; }
+  .panel .panel-title {
+    font-size: 0.8rem;
+    text-align: left; }
+
+  .row {
+    flex-direction: column;
+    align-items: center; } }
 @media only screen and (min-width: 640px) and (max-width: 1024px) {
   .page-image {
-    min-height: 45em; } }
+    min-height: 45em; }
+
+  .panel-title, div {
+    font-size: 1.2rem; } }
 @media only screen and (min-width: 1024px) {
   .wrapper {
     padding: 3em 0em; }
@@ -189,6 +200,9 @@ p {
   #portfolio {
     display: block;
     width: 86em;
-    max-width: calc(100vw - 6em); } }
+    max-width: calc(100vw - 6em); }
+
+  .panel-title, div {
+    font-size: 1.2rem; } }
 
 /*# sourceMappingURL=style.css.map */
