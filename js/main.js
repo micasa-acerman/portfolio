@@ -25,8 +25,6 @@
 			},
 		});
 		init();
-
-
 		function init(){
 			var state = 0;
 			$("#portfolio").hide();
@@ -42,6 +40,9 @@
 			$("#nav-certificates").click(function(){
 				transform('#main','#certificates')
 			});
+			$("#certificates .nav-back").click(function(){
+				transform('#certificates','#main')
+			});
 		}
 		function transform(from,to) {
 			$(from).animateCss('fadeOut',function(){
@@ -50,3 +51,41 @@
 				$(from).hide();
 			});
 		}
+
+(function($) {
+    $(function() {
+        $('.jcarousel').jcarousel();
+
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '-=1'
+            });
+
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '+=1'
+            });
+
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination();
+    });
+})(jQuery);
+
