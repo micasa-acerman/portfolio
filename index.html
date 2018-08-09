@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
 </head>
 <body>
 	<div class="wrapper animated zoomIn">
@@ -22,10 +23,10 @@
 					</p>
 					<div class="text-center">
 						<ul class="nav">
-							<li class="button">
-								<a id="nav-portfolio">Портфолио</a>
+							<li id="nav-portfolio" class="button">
+								<a>Портфолио</a>
 							</li>
-							<li class="button">
+							<li id="nav-certificates" class="button">
 								<a>Сертификаты</a>
 							</li>
 							<li class="button">
@@ -37,7 +38,7 @@
 								</a>
 								<a href="https://www.instagram.com/johny_rapira/" target="_blank">
 									<i class="fab fa-instagram fa-lg"></i>
-								</a>								
+								</a>							
 								<a href="https://www.facebook.com/profile.php?id=100027774557758" target="_blank">
 									<i class="fab fa-facebook fa-lg"></i>									
 								</a>								
@@ -72,6 +73,38 @@
 				</div>
 			</div>
 
+		</article>
+		<article id='certificates'>
+			<div class="panel">
+				<button class='nav-back' id='back-portfolio'>
+					<i class="fas fa-chevron-left fa-lg"></i>
+					<div class="">ГЛАВНАЯ</div>
+				</button>
+				<h2 class="text-center panel-title">Галерея</h2>
+			</div>
+			<div class="gallery items-3">
+				<div id="item-1" class="control-operator"></div>
+				<div id="item-2" class="control-operator"></div>
+				<div id="item-3" class="control-operator"></div>
+
+				<figure class="item">
+					<h1>1</h1>
+				</figure>
+
+				<figure class="item">
+					<h1>2</h1>
+				</figure>
+
+				<figure class="item">
+					<h1>3</h1>
+				</figure>
+
+				<div class="controls">
+					<a href="#item-1" class="control-button">•</a>
+					<a href="#item-2" class="control-button">•</a>
+					<a href="#item-3" class="control-button">•</a>
+				</div>
+			</div>
 		</article>
 	</div>
 	<script type="text/javascript" src="js/main.js"></script>

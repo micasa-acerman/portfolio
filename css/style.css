@@ -70,6 +70,7 @@ p {
     font-size: 10pt; }
 
 .button:hover {
+  cursor: pointer;
   border-color: #ff3333; }
   .button:hover a {
     color: #ff3333; }

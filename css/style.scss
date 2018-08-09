@@ -80,6 +80,7 @@
 		}
 	}
 	.button:hover {
+		cursor:pointer;
 		border-color:$accent;
 		a{
 			color:$accent;

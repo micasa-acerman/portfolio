@@ -30,11 +30,17 @@
 		function init(){
 			var state = 0;
 			$("#portfolio").hide();
+			$("#certificates").hide();
+
 			$("#nav-portfolio").click(function(){
 				transform('#main','#portfolio')
 			});
 			$("#portfolio .nav-back").click(function(){
 				transform('#portfolio','#main')
+			});
+
+			$("#nav-certificates").click(function(){
+				transform('#main','#certificates')
 			});
 		}
 		function transform(from,to) {
