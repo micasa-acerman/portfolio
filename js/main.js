@@ -29,6 +29,7 @@
 			var state = 0;
 			$("#portfolio").hide();
 			$("#certificates").hide();
+			$('#comment').hide();
 
 			$("#nav-portfolio").click(function(){
 				transform('#main','#portfolio')
@@ -42,6 +43,13 @@
 			});
 			$("#certificates .nav-back").click(function(){
 				transform('#certificates','#main')
+			});
+
+			$("#nav-comment").click(function(){
+				transform('#main','#comment')
+			});
+			$("#comment .nav-back").click(function(){
+				transform('#comment','#main')
 			});
 		}
 		function transform(from,to) {

@@ -4,6 +4,12 @@
 	$accent:#ff3333;
 
 	// GLOBAL
+
+
+	input,button,label {
+		display:block;
+	}
+
 	body{
 		background:$background; 
 		font-family: 'Roboto', sans-serif;
@@ -196,8 +202,25 @@
 		}
 
 	}
+	.form {
+		padding:1.2em;
+		input,button,textarea {
+			border: 1px solid rgb(140, 140, 140);
+			width:100%;
+			background-color:white;
+			font-size:14pt;
+			font-family: 'Roboto', sans-serif;
+			line-height:1.6;
+		}
+		label {
+			text-align:center;
+		}
+		button {
+			margin-top:1em;
+		}
 
-
+	}
+	
 
 	@media only screen and (max-width:640px) {
 		.block {
@@ -225,10 +248,10 @@
 		}
 		.jcarousel-wrapper {
 			width: 200px;
-			height: 266px;
+			height: 300px;
 			img {
 				width: 200px;
-				height: 266px;
+				height: 300px;
 			}
 			.jcarousel-control-prev,
 			.jcarousel-control-next {
@@ -285,7 +308,7 @@
 			width:86em;
 			max-width:calc(100vw - 6em);
 		}
-		#certificates{
+		#certificates,#comment{
 			display: block;
 			width:40em;
 			max-width:calc(100vw - 6em);
@@ -310,7 +333,7 @@
 		}
 	}
 
-
+	
 	.jcarousel-wrapper {
 		margin: 20px auto;
 		position: relative;
@@ -377,7 +400,7 @@
 		-moz-box-shadow: 0 0 2px #999;
 		box-shadow: 0 0 2px #999;
 	}
-
+	
 	.jcarousel-control-prev {
 		left: -50px;
 	}

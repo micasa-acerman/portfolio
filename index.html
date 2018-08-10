@@ -30,7 +30,7 @@
 							<li id="nav-certificates" class="button">
 								<a>Сертификаты</a>
 							</li>
-							<li class="button">
+							<li class="button" id='nav-comment'>
 								<a>Написать</a>
 							</li>
 							<li class="social">
@@ -91,21 +91,37 @@
 					<div class="jcarousel" data-jcarousel="true">
 						<ul style="left: 0px; top: 0px;">
 							<li><img src="img/cert.png" alt=""></li>
-							<li><img src="img/cert.png" alt=""></li>
+							<li><img src="img/cert_yandex.png" alt=""></li>
 							<li><img src="img/cert.png" alt=""></li>
 							<li><img src="img/cert.png" alt=""></li>
 							<li><img src="img/cert.png" alt=""></li>
 						</ul>
 					</div>
 
-					<p class="photo-credits">
-						Photos by <a href="http://www.mw-fotografie.de">Marc Wiegelmann</a>
-					</p>
-
 					<a href="#" class="jcarousel-control-prev inactive" data-jcarouselcontrol="true">‹</a>
 					<a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
 				</div>
 			</div>
+		</article>
+
+		<!-- КОММЕНТАРИИ -->
+		<article id='comment'>
+			<div class="panel">
+				<h2 class="text-center panel-title">НАПИСАТЬ</h2>
+				<button class='nav-back' id='back-portfolio'>
+					<i class="fas fa-chevron-left fa-lg"></i>
+					<div class="">ГЛАВНАЯ</div>
+				</button>
+			</div>
+					<form class="form">
+						<label>ИМЯ</label>
+						<input type="text" name="name"/>
+						<label>EMAIL</label>
+						<input type="email" name="email">
+						<label>СООБЩЕНИЕ</label>
+						<textarea></textarea>
+						<button type="submit">ОТПРАВИТЬ</button>
+					</form>
 		</article>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
