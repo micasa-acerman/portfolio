@@ -142,9 +142,10 @@
 		z-index:1;
 		position: relative;
 		.nav-back{
+			position: relative;
+			z-index: 1;
 			background:#fbfbfb;
 			border: 0px;
-			float:left;
 			div {
 				display:inline-block;
 				vertical-align:middle;
@@ -160,6 +161,10 @@
 			margin: 0.2em 0em;
 			font-weight:100;
 			letter-spacing:2px;
+		}
+		.panel-title{
+			position: absolute;
+			width:100%;
 		}
 	}
 
@@ -211,7 +216,6 @@
 			}
 			.panel-title {
 				font-size:0.8rem;
-				text-align:left;
 			}
 		}
 
@@ -260,6 +264,7 @@
 		.jcarousel-wrapper {
 			width: 600px;
 			height: 800px;
+
 		}
 		.wrapper{
 			padding:3em 0em;
@@ -275,10 +280,16 @@
 				min-height:50em;
 			}
 		}
-		#portfolio,#certificates {
+		#portfolio {
 			display: block;
 			width:86em;
 			max-width:calc(100vw - 6em);
+		}
+		#certificates{
+			display: block;
+			width:40em;
+			max-width:calc(100vw - 6em);
+
 		}
 
 		.panel-title,div {

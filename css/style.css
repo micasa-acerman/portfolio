@@ -124,9 +124,10 @@ p {
   z-index: 1;
   position: relative; }
   .panel .nav-back {
+    position: relative;
+    z-index: 1;
     background: #fbfbfb;
-    border: 0px;
-    float: left; }
+    border: 0px; }
     .panel .nav-back div {
       display: inline-block;
       vertical-align: middle; }
@@ -139,6 +140,9 @@ p {
     margin: 0.2em 0em;
     font-weight: 100;
     letter-spacing: 2px; }
+  .panel .panel-title {
+    position: absolute;
+    width: 100%; }
 
 .text-center {
   text-align: center;
@@ -172,8 +176,7 @@ p {
   .panel div {
     font-size: 0.8rem; }
   .panel .panel-title {
-    font-size: 0.8rem;
-    text-align: left; }
+    font-size: 0.8rem; }
 
   .row {
     flex-direction: column;
@@ -222,9 +225,14 @@ p {
     #main .page-image {
       min-height: 50em; }
 
-  #portfolio, #certificates {
+  #portfolio {
     display: block;
     width: 86em;
+    max-width: calc(100vw - 6em); }
+
+  #certificates {
+    display: block;
+    width: 40em;
     max-width: calc(100vw - 6em); }
 
   .panel-title, div {
