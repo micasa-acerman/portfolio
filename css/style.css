@@ -138,7 +138,7 @@ p {
       display: inline-block;
       vertical-align: middle;
       margin: 0px 10px; }
-  .panel .panel-title, .panel div {
+  .panel .panel-title, .panel span {
     font-family: 'Roboto', sans-serif;
     margin: 0.2em 0em;
     font-weight: 100;
@@ -187,6 +187,13 @@ p {
     text-align: center; }
 
 @media only screen and (max-width: 640px) {
+  article {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em; }
+
+  .page-image {
+    min-height: 20em; }
+
   .block {
     padding: 0em 1em; }
 
@@ -197,7 +204,7 @@ p {
   p {
     font-size: 10pt; }
 
-  .panel div {
+  .panel span {
     font-size: 0.8rem; }
   .panel .panel-title {
     font-size: 0.8rem; }
@@ -216,11 +223,24 @@ p {
     .jcarousel-wrapper .jcarousel-control-next {
       top: 120px; } }
 @media only screen and (min-width: 640px) and (max-width: 1360px) {
-  .page-image {
-    min-height: 45em; }
-
-  .panel-title, div {
+  .panel-title, span {
     font-size: 1.2rem; }
+
+  #main {
+    width: 86em;
+    max-width: 40em; }
+    #main .page-image {
+      margin: 0 auto; }
+
+  #portfolio {
+    display: block;
+    width: 86em;
+    max-width: calc(100vw - 6em); }
+
+  #certificates, #comment {
+    display: block;
+    width: 40em;
+    max-width: calc(100vw - 6em); }
 
   .jcarousel-wrapper {
     width: 600px;
@@ -259,7 +279,7 @@ p {
     width: 40em;
     max-width: calc(100vw - 6em); }
 
-  .panel-title, div {
+  .panel-title, span {
     font-size: 1.2rem; }
 
   .jcarousel-wrapper {
