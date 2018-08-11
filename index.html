@@ -109,19 +109,20 @@
 					<div class="">ГЛАВНАЯ</div>
 				</button>
 			</div>
-					<form class="form">
+					<form class="form" id="form-comment">
 						<label>ИМЯ</label>
-						<input type="text" name="name"/>
+						<input type="text" name="name" autofocus maxlength="20"/>
 						<label>EMAIL</label>
-						<input type="email" name="email">
+						<input type="email" name="email" maxlength="20">
 						<label>СООБЩЕНИЕ</label>
-						<textarea></textarea>
+						<textarea rows="6" maxlength="50"></textarea>
 						<button type="submit">ОТПРАВИТЬ</button>
 					</form>
 		</article>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.jcarouserl-core.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -211,17 +211,18 @@
 			font-family: 'Roboto', sans-serif;
 			line-height:1.6;
 			padding:0.4em;
+			max-width:40em;
+			margin: 0 auto;
+			display:block;
 		}
 		button {
 			border: 1px solid #c34747;
 			color:#c34747;
 			cursor:pointer;
+			margin-top:1em;
 		}
 		label {
 			text-align:center;
-		}
-		button {
-			margin-top:1em;
 		}
 
 	}

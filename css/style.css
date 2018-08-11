@@ -174,15 +174,17 @@ p {
     font-size: 14pt;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    padding: 0.4em; }
+    padding: 0.4em;
+    max-width: 40em;
+    margin: 0 auto;
+    display: block; }
   .form button {
     border: 1px solid #c34747;
     color: #c34747;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-top: 1em; }
   .form label {
     text-align: center; }
-  .form button {
-    margin-top: 1em; }
 
 @media only screen and (max-width: 640px) {
   .block {
