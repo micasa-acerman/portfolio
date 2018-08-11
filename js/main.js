@@ -26,7 +26,8 @@
 		});        
 		$(document).ready(function() { 
 			$('#form-comment').ajaxForm(function() { 
-				alert("Thank you for your comment!"); 
+				swal("Оповещение", "Вы успешно отправили сообщение!", "success");
+				transform('#comment','#main')
 			}); 
 		}); 
 

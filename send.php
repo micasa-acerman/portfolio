@@ -6,13 +6,13 @@
     }
 
     $ip = "localhost";
-    $user = "root";
-    $pass = "";
+    $user = "ce69789_portfoli";
+    $pass = "UBea9wug";
     $db = "portfolio";
     $table = "comment";
 
     $dbh = new PDO("mysql:host=$ip;dbname=$db", $user, $pass);
-$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $dbh->prepare("INSERT INTO $table (name, email, comment, ip, agent) VALUES (?, ?,?,?,?)");
     $stmt->bindParam(1, $name);
     $stmt->bindParam(2, $email);
