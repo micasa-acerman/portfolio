@@ -109,13 +109,13 @@
 					<div class="">ГЛАВНАЯ</div>
 				</button>
 			</div>
-					<form class="form" id="form-comment">
+					<form class="form" id="form-comment" action="send.php" method="post">
 						<label>ИМЯ</label>
 						<input type="text" name="name" autofocus maxlength="20"/>
 						<label>EMAIL</label>
 						<input type="email" name="email" maxlength="20">
 						<label>СООБЩЕНИЕ</label>
-						<textarea rows="6" maxlength="50"></textarea>
+						<textarea rows="6" maxlength="50" name="comment"></textarea>
 						<button type="submit">ОТПРАВИТЬ</button>
 					</form>
 		</article>
