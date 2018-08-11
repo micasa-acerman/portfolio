@@ -1,6 +1,4 @@
     <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
     if (empty($_POST["name"]) or empty($_POST["email"]) or empty($_POST["comment"])) {
         return http_response_code(404);
     }
@@ -12,7 +10,6 @@
     $table = "comment";
 
     $dbh = new PDO("mysql:host=$ip;dbname=$db", $user, $pass);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $dbh->prepare("INSERT INTO $table (name, email, comment, ip, agent) VALUES (?, ?,?,?,?)");
     $stmt->bindParam(1, $name);
     $stmt->bindParam(2, $email);
