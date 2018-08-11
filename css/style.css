@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:100");
+* {
+  font-family: 'Open Sans', sans-serif; }
+
 input, button, label {
   display: block; }
 
 body {
   background: #f4f4f4;
-  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   font-size: 11pt;
@@ -21,7 +23,6 @@ article {
 p {
   font-weight: 300;
   font-size: 11pt;
-  font-family: 'Open Sans', sans-serif;
   text-align: justify; }
 
 .text-center {
@@ -43,6 +44,7 @@ p {
   padding: 0em 2em; }
 
 .title {
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 1.9rem;
   margin: 0.2em 0em;
@@ -68,7 +70,7 @@ p {
     text-transform: uppercase;
     text-decoration: none;
     color: #636363;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.15em;
     font-weight: 300;
     font-size: 10pt; }
 
@@ -91,34 +93,42 @@ p {
 .hidden {
   display: none; }
 
-.row:hover {
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); }
-
 .row {
   z-index: 0;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   width: 100%;
-  display: flex; }
+  display: flex;
+  margin-bottom: 1em;
+  background-color: #efefef44; }
   .row .project-icon {
-    width: 20em;
-    min-height: 100%; }
+    width: 20em; }
     .row .project-icon img {
-      width: 20em;
-      min-height: 100%; }
+      width: 20em; }
   .row .project-content {
     padding: 1em 1em; }
     .row .project-content .project-title {
       text-align: center;
       font-size: 1.3rem;
       margin: 0.2em 0em;
-      font-weight: 100;
-      letter-spacing: 2px; }
+      font-weight: 300;
+      letter-spacing: 1px; }
     .row .project-content .project-company {
       text-align: center;
       font-size: 0.8rem;
       color: #a0a0a0;
       font-weight: 100; }
+    .row .project-content .project-attached {
+      text-align: center;
+      margin: 4px 0; }
+      .row .project-content .project-attached span {
+        color: white;
+        background-color: blue;
+        border-radius: 0.2em;
+        background-color: #ff7b7b;
+        padding: 4px 10px;
+        font-size: 10pt;
+        letter-spacing: 1px; }
     .row .project-content .project-description {
+      letter-spacing: 0.2px;
       text-align: justify; }
 
 .panel {
@@ -139,10 +149,10 @@ p {
       vertical-align: middle;
       margin: 0px 10px; }
   .panel .panel-title, .panel span {
-    font-family: 'Roboto', sans-serif;
     margin: 0.2em 0em;
     font-weight: 100;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    margin-top: 0; }
   .panel .panel-title {
     position: absolute;
     width: 100%; }
@@ -172,9 +182,7 @@ p {
     width: 100%;
     background-color: white;
     font-size: 14pt;
-    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    padding: 0.4em;
     max-width: 40em;
     margin: 0 auto;
     display: block; }
@@ -182,9 +190,13 @@ p {
     border: 1px solid #c34747;
     color: #c34747;
     cursor: pointer;
-    margin-top: 1em; }
+    margin-top: 1.4em;
+    font-size: 1rem;
+    padding: 0.4em; }
   .form label {
-    text-align: center; }
+    text-align: center;
+    margin-top: 0.8em;
+    font-family: 'Open Sans', sans-serif; }
 
 @media only screen and (max-width: 640px) {
   article {
@@ -224,7 +236,7 @@ p {
       top: 120px; } }
 @media only screen and (min-width: 640px) and (max-width: 1360px) {
   .panel-title, span {
-    font-size: 1.2rem; }
+    font-size: 1rem; }
 
   #main {
     width: 86em;
@@ -243,10 +255,10 @@ p {
     max-width: calc(100vw - 6em); }
 
   .jcarousel-wrapper {
-    width: 600px;
+    width: 30em;
     height: 800px; }
     .jcarousel-wrapper img {
-      width: 600px;
+      width: 30em;
       height: 800px; }
     .jcarousel-wrapper .jcarousel-control-prev,
     .jcarousel-wrapper .jcarousel-control-next {
@@ -283,11 +295,11 @@ p {
     font-size: 1.2rem; }
 
   .jcarousel-wrapper {
-    width: 600px;
-    height: 800px; }
+    width: 32em;
+    height: 44em; }
     .jcarousel-wrapper img {
-      width: 600px;
-      height: 800px; }
+      width: 32em;
+      height: 46em; }
     .jcarousel-wrapper .jcarousel-control-prev,
     .jcarousel-wrapper .jcarousel-control-next {
       top: 380px; } }

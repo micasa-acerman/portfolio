@@ -4,7 +4,9 @@
 	$accent:#ff3333;
 
 	// GLOBAL
-
+	*{
+		font-family: 'Open Sans', sans-serif;
+	}
 
 	input,button,label {
 		display:block;
@@ -12,7 +14,6 @@
 
 	body{
 		background:$background; 
-		font-family: 'Roboto', sans-serif;
 		line-height:1.6;
 		overflow-x: hidden;
 		font-size:11pt;
@@ -24,13 +25,11 @@
 		z-index:1;
 		box-shadow: 4px 4px 5px rgba(0.2,0.2,0.2,0.1);
 		align-items:center;
-		//display:flex;
 		margin:0px auto;
 	}
 	p{
 		font-weight:300;
 		font-size:11pt;
-		font-family: 'Open Sans', sans-serif;
 		text-align:justify;
 	}
 	.text-center{
@@ -55,6 +54,7 @@
 		padding: 0em 2em;
 	}
 	.title{
+		font-family:"Roboto", sans-serif;
 		text-align:center;
 		font-size:1.9rem;	
 		margin: 0.2em 0em;
@@ -80,7 +80,7 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			color:#636363;
-			letter-spacing:0.3em;
+			letter-spacing:0.15em;
 			font-weight:300;
 			font-size:10pt;
 		}
@@ -105,20 +105,20 @@
 	}
 
 
-	.row:hover{
-		box-shadow: 1px 1px 6px rgba(0.2,0.2,0.2,0.5);
-	}
+	// .row:hover{
+	// 	box-shadow: 1px 1px 6px rgba(0.2,0.2,0.2,0.5);
+	// }
 	.row{
 		z-index: 0;
-		box-shadow: 0px 0px 5px rgba(0.2,0.2,0.2,0.2);
+		// box-shadow: 0px 0px 5px rgba(0.2,0.2,0.2,0.2);
 		width:100%;
 		display:flex;
+		margin-bottom:1em;
+			background-color:#efefef44;
 		.project-icon{
 			width:20em;
-			min-height:100%;
 			img{
 				width:20em;
-				min-height:100%;
 			}
 		}
 		.project-content{
@@ -127,8 +127,8 @@
 				text-align:center;
 				font-size:1.3rem;	
 				margin: 0.2em 0em;
-				font-weight:100;
-				letter-spacing:2px;
+				font-weight:300;
+				letter-spacing:1px;
 			}
 			.project-company {
 				text-align:center;
@@ -136,7 +136,21 @@
 				color:#a0a0a0;
 				font-weight:100;
 			}
+			.project-attached{
+				text-align:center;
+				margin:4px 0;
+				span {
+					color:white;
+					background-color:blue;
+					border-radius:0.2em;
+					background-color:#ff7b7b;
+					padding:4px 10px;
+					font-size:10pt;
+					letter-spacing:1px;
+				}
+			}
 			.project-description {
+				letter-spacing:0.2px;
 				text-align:justify;
 			}
 		}
@@ -163,10 +177,10 @@
 			}
 		}
 		.panel-title,span{
-			font-family: 'Roboto', sans-serif;
 			margin: 0.2em 0em;
 			font-weight:100;
 			letter-spacing:2px;
+			margin-top:0;
 		}
 		.panel-title{
 			position: absolute;
@@ -208,9 +222,8 @@
 			width:100%;
 			background-color:white;
 			font-size:14pt;
-			font-family: 'Roboto', sans-serif;
 			line-height:1.6;
-			padding:0.4em;
+			//padding:0.4em;
 			max-width:40em;
 			margin: 0 auto;
 			display:block;
@@ -219,10 +232,14 @@
 			border: 1px solid #c34747;
 			color:#c34747;
 			cursor:pointer;
-			margin-top:1em;
+			margin-top:1.4em;
+			font-size:1rem;
+			padding:0.4em;
 		}
 		label {
 			text-align:center;
+			margin-top:0.8em;
+			font-family: 'Open Sans', sans-serif;
 		}
 
 	}
@@ -276,7 +293,7 @@
 	@media only screen and (min-width:640px) and (max-width:1360px) {
 
 		.panel-title,span {
-			font-size:1.2rem;
+			font-size:1rem;
 		}
 		#main {
 			width:86em;
@@ -294,13 +311,12 @@
 			display: block;
 			width:40em;
 			max-width:calc(100vw - 6em);
-		}
-
+		}			
 		.jcarousel-wrapper {
-			width: 600px;
+			width: 30em;
 			height: 800px;
 			img {
-				width:600px;
+				width:30em;
 				height:800px;
 			}
 			.jcarousel-control-prev,
@@ -308,6 +324,8 @@
 				top:380px;
 			}
 		}
+
+
 
 	}
 
@@ -347,11 +365,11 @@
 			font-size:1.2rem;
 		}
 		.jcarousel-wrapper {
-			width: 600px;
-			height: 800px;
+			width: 32em;
+			height: 44em;
 			img {
-				width:600px;
-				height:800px;
+				width:32em;
+				height:46em;
 			}
 			.jcarousel-control-prev,
 			.jcarousel-control-next {
