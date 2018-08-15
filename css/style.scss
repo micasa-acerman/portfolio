@@ -139,7 +139,7 @@
 			.project-attached{
 				text-align:center;
 				margin:4px 0;
-				span {
+				a {
 					color:white;
 					background-color:blue;
 					border-radius:0.2em;
@@ -147,6 +147,7 @@
 					padding:4px 10px;
 					font-size:10pt;
 					letter-spacing:1px;
+					text-decoration:none;
 				}
 			}
 			.project-description {
