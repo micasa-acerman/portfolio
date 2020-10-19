@@ -11,6 +11,11 @@
 	input,button,label {
 		display:block;
 	}
+	button{
+		&:focus{
+			outline: none;
+		}
+	}
 
 	body{
 		background:$background; 
@@ -499,4 +504,8 @@
 		color: #fff;
 		opacity: 1;
 		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+	}
+	.jcarousel li img {
+		-o-object-fit: contain;
+		object-fit: contain;
 	}
